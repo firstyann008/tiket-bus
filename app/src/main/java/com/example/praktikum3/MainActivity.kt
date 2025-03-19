@@ -25,8 +25,10 @@ class MainActivity : AppCompatActivity() {
                         text = huruf.toString()
                         textSize = 18f
                         layoutParams =
-                            LinearLayout.LayoutParams(0,
-                                LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+                            LinearLayout.LayoutParams(
+                                0,
+                                LinearLayout.LayoutParams.WRAP_CONTENT, 1f
+                            )
 
                         setBackgroundColor(resources.getColor(R.color.primary, null))
 
@@ -36,8 +38,10 @@ class MainActivity : AppCompatActivity() {
                         setOnClickListener {
                             val intent =
                                 Intent(this@MainActivity, SecondActivity::class.java)
-                            intent.putExtra("HURUF",
-                                huruf.toString())
+                            intent.putExtra(
+                                "HURUF",
+                                huruf.toString()
+                            )
                             startActivity(intent)
                         }
                     }
@@ -47,3 +51,4 @@ class MainActivity : AppCompatActivity() {
             parentLayout.addView(rowLayout)
         }
     }
+}
